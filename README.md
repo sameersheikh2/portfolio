@@ -196,21 +196,7 @@ export const skills = [
 
 ## 🎯 Key Features Explained
 
-### Theme System
-
-- Context-based theme management
-- Persistent theme preference
-- Smooth transitions between themes
-- System preference detection
-
-### Animation System
-
 - BlurFade components for scroll-triggered animations
-- Framer Motion for smooth transitions
-- Custom timing and easing functions
-
-### Responsive Design
-
 - Mobile-first approach
 - Breakpoint-specific layouts
 - Touch-friendly interactions
