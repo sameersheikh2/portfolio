@@ -4,6 +4,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "../../components/ui/avatar";
+import { Highlighter } from "../../components/ui/highlighter";
 
 const Hero = () => {
   return (
@@ -13,7 +14,11 @@ const Hero = () => {
           <div className="flex-1 space-y-2">
             <BlurFade delay={0.04} inView>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl lg:text-6xl">
-                Hi, I’m Sameer Sheikh 👋
+                Hi, I’m{" "}
+                <Highlighter action="underline" color="#FF9800">
+                  Sameer Sheikh
+                </Highlighter>
+                👋
               </h1>
             </BlurFade>
             <BlurFade delay={0.04 * 2} inView>

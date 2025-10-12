@@ -22,3 +22,8 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

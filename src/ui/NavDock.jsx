@@ -9,6 +9,7 @@ import {
 import { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { Separator } from "../../components/ui/separator";
+import { AnimatedThemeToggler } from "../../components/ui/animated-theme-toggler";
 
 const NavDock = () => {
   const { toggleTheme, theme } = useContext(ThemeContext);
@@ -76,26 +77,7 @@ const NavDock = () => {
               theme === "light" ? "hover:bg-black/10" : "hover:bg-white/10"
             }
           >
-            <button onClick={toggleTheme} type="button">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  {theme === "light" ? (
-                    <Sun
-                      strokeWidth={1.75}
-                      className="size-full cursor-pointer"
-                    />
-                  ) : (
-                    <MoonStar
-                      strokeWidth={1.75}
-                      className="size-full cursor-pointer"
-                    />
-                  )}
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Toggle Theme</p>
-                </TooltipContent>
-              </Tooltip>
-            </button>
+            <AnimatedThemeToggler />
           </DockIcon>
         </Dock>
       </TooltipProvider>

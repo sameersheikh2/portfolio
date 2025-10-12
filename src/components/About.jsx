@@ -1,5 +1,6 @@
 import React from "react";
 import { BlurFade } from "../../components/ui/blur-fade";
+import { Highlighter } from "../../components/ui/highlighter";
 
 const About = () => {
   return (
@@ -19,10 +20,17 @@ const About = () => {
           day.
         </p>
         <p className="mt-3 text-base text-muted leading-relaxed">
-          I'm not where I want to be yet — but I believe in{" "}
-          <em>consistent effort, growth in public,</em> and the power of small
-          wins. Every day, I build a little more, learn a little more, and edge
-          closer to becoming the engineer I aspire to be.
+          I'm not where I want to be yet —
+          <Highlighter
+            action="highlight"
+            color="green"
+            animationDuration="1000"
+          >
+            but I believe in
+            <em> consistent effort, growth </em> and the power of small wins.
+          </Highlighter>{" "}
+          Every day, I build a little more, learn a little more, and edge closer
+          to becoming the engineer I aspire to be.
         </p>
       </BlurFade>
     </section>
