@@ -1,5 +1,5 @@
 import { Dock, DockIcon } from "../../components/ui/dock";
-import { Github, Linkedin, MoonStar, Sun } from "lucide-react";
+import { Github, Linkedin, Moon, MoonStar, Sun } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -9,7 +9,6 @@ import {
 import { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { Separator } from "../../components/ui/separator";
-import { AnimatedThemeToggler } from "../../components/ui/animated-theme-toggler";
 
 const NavDock = () => {
   const { toggleTheme, theme } = useContext(ThemeContext);
@@ -73,11 +72,12 @@ const NavDock = () => {
           </DockIcon>
           <Separator orientation="vertical" className="h-full w-5" />
           <DockIcon
+            onClick={toggleTheme}
             className={
               theme === "light" ? "hover:bg-black/10" : "hover:bg-white/10"
             }
           >
-            <AnimatedThemeToggler />
+            {theme === "light" ? <Sun /> : <Moon />}
           </DockIcon>
         </Dock>
       </TooltipProvider>

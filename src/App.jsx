@@ -4,6 +4,7 @@ import About from "./components/About";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import NavDock from "./ui/NavDock";
+import Projects from "./components/Projects";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <About />
           <Education />
           <Skills />
+          <Projects />
         </main>
       </div>
 
