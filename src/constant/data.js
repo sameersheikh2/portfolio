@@ -41,6 +41,6 @@ export const projects = [
     ],
     video: "/project-1.mp4",
     href: "https://moviepalace.vercel.app",
-    sourceLink: "https://github.com/yourusername/moviepalace",
+    sourceLink: "https://github.com/sameersheikh2/moviepalace2.0",
   },
 ];
