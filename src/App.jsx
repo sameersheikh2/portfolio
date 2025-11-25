@@ -5,6 +5,8 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import NavDock from "./ui/NavDock";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import GitHubStats from "./components/GitHubStats";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
           <Education />
           <Skills />
           <Projects />
+          <GitHubStats />
+          <Contact />
         </main>
       </div>
 

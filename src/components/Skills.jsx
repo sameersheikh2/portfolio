@@ -7,7 +7,7 @@ import { ThemeContext } from "../contexts/ThemeContext";
 const Skills = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <section id="education">
+    <section id="skills">
       <div className="flex min-h-0 flex-col gap-y-3">
         <BlurFade delay={0.04 * 7}>
           <h2 className="text-2xl font-bold mb-5">Skills</h2>
