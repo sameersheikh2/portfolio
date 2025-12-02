@@ -19,17 +19,11 @@ import {
 import { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { Separator } from "../../components/ui/separator";
+import MobileDock from "./MobileDock";
 
-const NavDock = () => {
+const NavDock = ({ isMobile, scrollTo }) => {
   const { toggleTheme, theme } = useContext(ThemeContext);
   const isLight = theme === "light";
-
-  const scrollTo = (e, id) => {
-    e.preventDefault();
-    if (id === "#home") return window.scrollTo({ top: 0, behavior: "smooth" });
-    const el = document.querySelector(id);
-    if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: "smooth" });
-  };
 
   const navItems = [
     {
@@ -64,6 +58,10 @@ const NavDock = () => {
     },
   ];
 
+  if (isMobile) {
+    return <MobileDock isLight={isLight} toggleTheme={toggleTheme} />;
+  }
+
   return (
     <div className="relative">
       <TooltipProvider>
@@ -76,7 +74,6 @@ const NavDock = () => {
               : "border-gray-700 bg-gray-900/80"
           } backdrop-blur-sm`}
         >
-          {/* Navigation Items */}
           {navItems.map((item) => (
             <DockIcon
               key={item.id}
@@ -100,8 +97,6 @@ const NavDock = () => {
           ))}
 
           <Separator orientation="vertical" className="h-full w-5" />
-
-          {/* Social Links */}
           <DockIcon
             className={isLight ? "hover:bg-black/10" : "hover:bg-white/10"}
           >
@@ -148,7 +143,6 @@ const NavDock = () => {
             </Tooltip>
           </DockIcon>
 
-          {/* Theme Toggle */}
           <DockIcon
             onClick={toggleTheme}
             className={isLight ? "hover:bg-black/10" : "hover:bg-white/10"}

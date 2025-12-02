@@ -4,8 +4,6 @@ import { Badge } from "../../components/ui/badge";
 
 const GitHubStats = () => {
   const username = "sameersheikh2";
-
-  // Console greeting
   useEffect(() => {
     if (typeof window !== "undefined") {
       console.log(
@@ -29,7 +27,6 @@ const GitHubStats = () => {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
-            {/* GitHub Stats Card */}
             <div className="bg-card p-6 rounded-xl border border-border shadow-lg">
               <h3 className="text-xl font-semibold mb-4">GitHub Overview</h3>
               <img
@@ -39,7 +36,6 @@ const GitHubStats = () => {
               />
             </div>
 
-            {/* Top Languages Card */}
             <div className="bg-card p-6 rounded-xl border border-border shadow-lg">
               <h3 className="text-xl font-semibold mb-4">Top Languages</h3>
               <img
@@ -49,7 +45,6 @@ const GitHubStats = () => {
               />
             </div>
 
-            {/* Contribution Graph - Full Width */}
             <div className="bg-card p-6 rounded-xl border border-border shadow-lg md:col-span-2">
               <h3 className="text-xl font-semibold mb-4">Activity Graph</h3>
               <img
@@ -66,7 +61,6 @@ const GitHubStats = () => {
               />
             </div>
 
-            {/* GitHub Button */}
             <div className="md:col-span-2 flex justify-center mt-4">
               <a
                 href={`https://github.com/${username}`}
