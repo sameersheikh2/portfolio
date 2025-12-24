@@ -1,5 +1,6 @@
 import { Home, User, Code, Folder, Mail, User as UserIcon } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 import {
   Tooltip,
   TooltipContent,
@@ -7,7 +8,8 @@ import {
   TooltipTrigger,
 } from "../../components/ui/tooltip";
 
-const MobileHeader = ({ scrollTo, isLight }) => {
+const MobileHeader = ({ scrollTo }) => {
+  const { isLight } = useContext(ThemeContext);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,34 +24,36 @@ const MobileHeader = ({ scrollTo, isLight }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const iconColor = isLight ? "text-gray-900" : "text-gray-100";
+
   const navItems = [
     {
       id: "home",
-      icon: <Home className="h-4 w-4" />,
+      icon: <Home className={`h-4 w-4 ${iconColor}`} />,
       label: "Home",
       href: "#home",
     },
     {
       id: "about",
-      icon: <User className="h-4 w-4" />,
+      icon: <User className={`h-4 w-4 ${iconColor}`} />,
       label: "About",
       href: "#about",
     },
     {
       id: "skills",
-      icon: <Code className="h-4 w-4" />,
+      icon: <Code className={`h-4 w-4 ${iconColor}`} />,
       label: "Skills",
       href: "#skills",
     },
     {
       id: "projects",
-      icon: <Folder className="h-4 w-4" />,
+      icon: <Folder className={`h-4 w-4 ${iconColor}`} />,
       label: "Projects",
       href: "#projects",
     },
     {
       id: "contact",
-      icon: <Mail className="h-4 w-4" />,
+      icon: <Mail className={`h-4 w-4 ${iconColor}`} />,
       label: "Contact",
       href: "#contact",
     },
