@@ -52,6 +52,7 @@ export const projects = [
     technologies: [
       "React.js",
       "Redux Toolkit",
+      "NodeJs",
       "Express.js",
       "MongoDB",
       "JWT Authentication",
