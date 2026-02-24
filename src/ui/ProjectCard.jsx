@@ -31,14 +31,14 @@ const ProjectCard = ({
           loop
           muted
           playsInline
-          className="pointer-events-none w-full h-40 object-cover object-top"
+          className="pointer-events-none w-full h-48 object-cover object-top"
         />
       )}
       <CardHeader className="px-2 py-1">
         <div>
           <CardTitle className="text-[14px]">{title}</CardTitle>
           <time className=" text-[11px] text-muted-foreground">{dates}</time>
-          <p className="text-pretty font-sans text-[12px] text-muted-foreground line-clamp-2">
+          <p className="text-pretty font-sans text-[13px] text-muted-foreground line-clamp-2">
             {description}
           </p>
         </div>
