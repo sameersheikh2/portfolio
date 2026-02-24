@@ -64,4 +64,14 @@ export const projects = [
     href: "https://devhubio.vercel.app",
     sourceLink: "https://github.com/sameersheikh2/Job-board",
   },
+  {
+    id: 3,
+    title: "MasaiPe",
+    description:
+      "💰 Payout Automation System for EdTech Mentors A secure, flexible, and auditable platform to automate payouts for mentors, instructors, and evaluators in EdTech organizations. Streamlines session tracking, payment processing, and audit trails.",
+    technologies: ["React", "JavaScript", "Tailwind CSS", "Redux", "Firebase"],
+    video: "/project-3.mp4",
+    href: "https://masaipe.vercel.app",
+    sourceLink: "https://github.com/sameersheikh2/masaipe",
+  },
 ];
