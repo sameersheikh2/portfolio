@@ -9,6 +9,7 @@ import {
   Code,
   Folder,
   Mail,
+  Download,
 } from "lucide-react";
 import {
   Tooltip,
@@ -165,6 +166,28 @@ const NavDock = ({ isMobile, scrollTo }) => {
               </TooltipTrigger>
               <TooltipContent>
                 <p>{isLight ? "Dark Mode" : "Light Mode"}</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+
+          <DockIcon
+            className={isLight ? "hover:bg-black/10" : "hover:bg-white/10"}
+          >
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="size-full flex items-center justify-center"
+                >
+                  <Download
+                    strokeWidth={1.75}
+                    className="size-full cursor-pointer"
+                  />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Download Resume</p>
               </TooltipContent>
             </Tooltip>
           </DockIcon>

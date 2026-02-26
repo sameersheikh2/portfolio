@@ -1,4 +1,12 @@
-import { Home, User, Code, Folder, Mail, User as UserIcon } from "lucide-react";
+import {
+  Home,
+  User,
+  Code,
+  Folder,
+  Mail,
+  User as UserIcon,
+  Download,
+} from "lucide-react";
 import { useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import {
@@ -102,6 +110,21 @@ const MobileHeader = ({ scrollTo }) => {
                     </TooltipContent>
                   </Tooltip>
                 ))}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      href="/resume.pdf"
+                      download
+                      className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                      aria-label="Download Resume"
+                    >
+                      <Download className={`h-4 w-4 ${iconColor}`} />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">
+                    <p>Download Resume</p>
+                  </TooltipContent>
+                </Tooltip>
               </TooltipProvider>
             </div>
           </nav>
