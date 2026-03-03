@@ -9,18 +9,20 @@ export const education = [
     id: 2,
     instituteName: "Masai School",
     course: "Software Development Bootcamp",
-    year: "- Ongoing",
+    year: "June 2025 - Ongoing",
     avatarUrl: "/favicon.png",
   },
 ];
 
 export const skills = [
-  "ReactJs",
+  "React.js",
   "Node.js",
+  "Express.js",
+  "MongoDB",
   "TailwindCSS",
+  "JavaScript",
   "HTML",
   "CSS",
-  "JavaScript",
   "Git",
   "Github",
 ];
